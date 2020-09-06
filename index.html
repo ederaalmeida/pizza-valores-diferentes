@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Compre Pizza</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+    <div class="modelos">
+        <div class="pizza-item">
+            <a href="">
+                <div class="pizza-item-imagem"><img src="" /></div>
+                <div class="pizza-item-adicionar">+</div>
+            </a>
+            <div class="pizza-item-preco">R$</div>
+            <div class="pizza-item-nome"></div>
+            <div class="pizza-item-descricao"></div>
+        </div>
+        <div class="carrinho-item">
+            <img src="" />
+            <div class="carrinho-item-nome"></div>
+            <div class="carrinho-item-quantidadearea">
+                <button class="carrinho-item-quantidademenos">-</button>
+                <div class="carrinho-item-quantidade">1</div>
+                <button class="carrinho-item-quantidademais">+</button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <!--elemento representa um contêiner para conteúdo introdutório ou um conjunto de links de navegação.-->
+        <div class="menu-abrir"><span>0</span>🛒</div>
+    </header>
+    <main>
+        <!--especifica o conteúdo principal de um documento.-->
+        <h1>Pizzas</h1>
+        <div class="pizza-area"></div>
+    </main>
+    <aside>
+        <!--define algum conteúdo além do conteúdo em que é colocada.-->
+        <div class="carrinho-area">
+            <div class="menu-fechar">X</div>
+            <h1>Suas Pizzas</h1>
+            <div class="carrinho"></div>
+            <div class="carrinho-detalhes">
+                <div class="carrinho-totalitem subtotal">
+                    <span>Subtotal</span>
+                    <!-- é um contêiner embutido usado para marcar uma parte de um texto ou uma parte de um documento.-->
+                    <span>R$</span>
+                </div>
+                <div class="carrinho-totalitem desconto">
+                    <span>Desconto (-10%)</span>
+                    <span>R$</span>
+                </div>
+                <div class="carrinho-totalitem total grande">
+                    <span>Total</span>
+                    <span>R$</span>
+                </div>
+                <div class="carrinho-finalizar">Finalizar a compra</div>
+            </div>
+        </div>
+    </aside>
+    <div class="pizzaJanelaArea">
+        <div class="pizzaJanelaCorpo">
+            <div class="pizzaInformacao-cancelarCelularBotao">Voltar</div>
+            <div class="pizzagrande">
+                <img src="" />
+            </div>
+            <div class="pizzaInformacao">
+                <h1></h1>
+                <div class="pizzaInformacao-descricao"></div>
+                <div class="pizzaInformacao-tamanhoarea">
+                    <div class="pizzaInformacao-seletor">Tamanho</div>
+                    <div class="pizzaInformacao-tamanhos">
+                        <div data-key="0" class="pizzaInformacao-tamanho">PEQUENA<span></span></div>
+                        <div data-key="1" class="pizzaInformacao-tamanho">MÉDIA<span></span></div>
+                        <div data-key="2" class="pizzaInformacao-tamanho selected">GRANDE<span></span></div>
+                    </div>
+                </div>
+                <div class="pizzaInformacao-precoarea">
+                    <div class="pizzaInformacao-seletor">Preço</div>
+                    <div class="pizzaInformacao-preco">
+                        <div class="pizzaInformacao-atualPreco">R$</div>
+                        <div class="pizzaInformacao-quantidadearea">
+                            <button class="pizzaInformacao-quantidademenos">-</button>
+                            <div class="pizzaInformacao-quantidade">1</div>
+                            <button class="pizzaInformacao-quantidademais">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pizzaInformacao-adicionarBotao">Adicionar ao carrinho</div>
+                <div class="pizzaInformacao-cancelarBotao">Cancelar</div>
+            </div>
+        </div>
+    </div>
+    <script src="pizzas.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>

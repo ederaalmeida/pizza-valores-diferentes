@@ -1,0 +1,614 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+
+/* 
+    Created on : 14/08/2020, 20:48:19
+    Author     : TI
+*/
+
+
+/*Seleciona todos os elementos
+* box-sizing: propriedade define como a largura e a altura 
+de um elemento são calculadas: devem incluir preenchimento e bordas ou não.
+* border-box: As propriedades de largura e altura (e propriedades mín. / Máx.) 
+Incluem conteúdo, preenchimento e borda
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*body: corpo
+*background-color: propriedade define a cor de fundo de um elemento.
+*font-family: propriedade especifica a fonte de um elemento.
+*font-size: propriedade define o tamanho de uma fonte.
+*display: propriedade especifica o comportamento de exibição (o tipo de caixa de renderização) 
+de um elemento.
+*margin: propriedade define as margens de um elemento
+*height: propriedade define a altura mínima de um elemento.
+*/
+
+body {
+    background-color: #EEE;
+    font-family: Arial;
+    font-size: 15px;
+    display: flex;
+    /*Exibe um elemento como um flex container em nível de bloco*/
+    margin: 0;
+    min-height: 100vh;
+}
+
+
+/* .class */
+
+.modelos {
+    display: none;
+    /*O elemento foi completamente removido*/
+}
+
+
+/*header: cabeçalho
+*position: propriedade especifica o tipo de método de posicionamento 
+usado para um elemento estático, relativo, absoluto, fixo ou aderente).
+*left: propriedade afeta a posição horizontal de um elemento posicionado. 
+Esta propriedade não tem efeito em elementos não posicionados.
+*top: propriedade afeta a posição vertical de um elemento posicionado. 
+Esta propriedade não tem efeito em elementos não posicionados.
+*height: propriedade define a altura de um elemento.
+*justify-content: propriedade alinha os itens do contêiner flexível quando os itens 
+não usam todo o espaço disponível no eixo principal (horizontalmente).
+*align-items: propriedade especifica o alinhamento padrão para itens dentro do contêiner flexível.
+*/
+
+header {
+    position: fixed;
+    /*O elemento está posicionado em relação à janela do navegador*/
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 60px;
+    background-color: #399ade;
+    display: none;
+    justify-content: flex-end;
+    /*Os itens são posicionados no final do contêiner*/
+    align-items: center;
+    /*Os itens são posicionados no centro do contêiner*/
+}
+
+
+/*margin-right: propriedade define a margem direita de um elemento.
+*padding: O preenchimento de um elemento é o espaço entre seu conteúdo e sua borda.
+*margin: Preenchimento cria espaço extra dentro de um elemento, enquanto 
+a margem cria espaço extra ao redor de um elemento.
+*border-radius: propriedade define o raio dos cantos do elemento.
+*/
+
+.menu-abrir {
+    margin-right: 15px;
+    font-size: 26px;
+    background-color: #a9dcff;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.menu-abrir span {
+    margin-right: 10px;
+}
+
+
+/*width: propriedade define a largura de um elemento.*/
+
+.menu-fechar {
+    width: 32px;
+    height: 32px;
+    display: none;
+    font-size: 30px;
+}
+
+
+/*aside: define algum conteúdo além do conteúdo em que é colocada.
+*transition: Sempre especifique a propriedade de duração da transição , 
+caso contrário, a duração é 0s e a transição não terá efeito.
+*overflow-x: propriedade especifica se é necessário cortar o conteúdo, adicionar uma barra 
+de rolagem ou exibir o conteúdo de estouro de um elemento de nível de bloco, 
+quando ele estourar nas bordas esquerda e direita.
+
+*/
+
+aside {
+    background-color: #9ccbe6;
+    width: 0vw;
+    font-family: Arial;
+    transition: all ease .2s;
+    overflow-x: hidden;
+    /*O conteúdo é cortado - e nenhum mecanismo de rolagem é fornecido*/
+}
+
+aside.show {
+    width: 30vw;
+}
+
+.carrinho-area {
+    padding: 20px;
+}
+
+
+/*main: principal
+*flex: propriedade define o comprimento flexível em itens flexíveis.
+*/
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    font-family: Arial;
+}
+
+
+/*grid-template-columns : propriedade especifica o número (e as larguras) das 
+colunas em um layout de grade.*/
+
+.pizza-area {
+    display: grid;
+    /*Exibe um elemento como um contêiner de grade em nível de bloco*/
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+/*text-align: propriedade especifica o alinhamento horizontal do texto em 
+um elemento.
+*max-width: propriedade define a largura máxima de um elemento.
+*/
+
+.pizza-item {
+    text-align: center;
+    max-width: 250px;
+    font-family: Arial;
+    margin: 0 auto 50px auto;
+}
+
+
+/*flex-direction: propriedade especifica a direção dos itens flexíveis.
+*text-decoration: propriedade especifica a decoração adicionada ao texto e é uma propriedade abreviada
+*/
+
+.pizza-item a {
+    display: flex;
+    flex-direction: column;
+    /*Os itens flexíveis são exibidos verticalmente, como uma coluna*/
+    align-items: center;
+    text-decoration: none;
+}
+
+
+/*box-shadow: propriedade anexa uma ou mais sombras a um elemento.*/
+
+.pizza-item-imagem {
+    width: 200px;
+    height: 200px;
+    background-color: #EEE;
+    border-radius: 100px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
+}
+
+.pizza-item-imagem img {
+    width: 100%;
+    height: auto;
+    /*O navegador calcula a altura. Este é o padrão*/
+}
+
+
+/*line-height: propriedade especifica a altura de uma linha.
+*color: propriedade especifica a cor do texto.
+* cursor: propriedade especifica o cursor do mouse a ser exibido ao apontar sobre um elemento.
+*margin-top: propriedade define a margem superior de um elemento.
+*/
+
+.pizza-item-adicionar {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #388bc5;
+    text-align: center;
+    color: #FFF;
+    font-size: 22px;
+    cursor: pointer;
+    /*O cursor é um ponteiro e indica um link*/
+    margin-top: -25px;
+    transition: all ease .2s;
+}
+
+
+/*hover: seletor é usado para selecionar elementos quando você passa o mouse sobre eles.*/
+
+.pizza-item a:hover .pizza-item-adicionar {
+    background-color: #244c88;
+}
+
+.pizza-item-preco {
+    font-size: 15px;
+    color: #333;
+    margin-top: 5px;
+}
+
+
+/*font-weigth: propriedade define como os caracteres grossos ou finos no texto devem ser exibidos.*/
+
+.pizza-item-nome {
+    font-size: 20px;
+    font-weight: bold;
+    /*defines caracteres grossos*/
+    color: #000;
+    margin-top: 5px;
+}
+
+.pizza-item-descricao {
+    font-size: 13px;
+    color: #555;
+    margin-top: 10px;
+}
+
+
+/*bottom: propriedade afeta a posição vertical de um elemento posicionado. 
+Esta propriedade não tem efeito em elementos não posicionados.
+*propriedade especifica se deve cortar o conteúdo, adicionar uma barra de rolagem 
+ou exibir o conteúdo de estouro de um elemento de nível de bloco, quando ele estourar 
+nas bordas superior e inferior.
+*/
+
+.pizzaJanelaArea {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: none;
+    transition: all ease .5s;
+    justify-content: center;
+    /*Os itens são posicionados no centro do contêiner*/
+    align-items: center;
+    overflow-y: auto;
+    /*Deve fazer com que um mecanismo de rolagem seja fornecido para caixas transbordando*/
+}
+
+.pizzaJanelaCorpo {
+    width: 900px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #999;
+    display: flex;
+    margin: 20px 0px;
+}
+
+.pizzagrande {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pizzagrande img {
+    height: 400px;
+    width: auto;
+}
+
+
+/*padding-bottom: propriedade define o preenchimento inferior (espaço) de um elemento.*/
+
+.pizzaInformacao {
+    flex: 1;
+    font-family: Arial;
+    padding-bottom: 50px;
+}
+
+.pizzaInformacao h1 {
+    margin-top: 50px;
+}
+
+.pizzaInformacao .pizzaInformacao-descricao {
+    font-size: 15px;
+    color: #999;
+    margin-top: 10px;
+    font-family: Arial;
+}
+
+
+/*text-transform: propriedade controla a capitalização do texto.*/
+
+.pizzaInformacao-seletor {
+    color: #CCC;
+    text-transform: uppercase;
+    /*Transforma todos os caracteres em maiúsculas*/
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+/*overflow: Propriedade especifica o que deve acontecer se o conteúdo estourar a caixa de um elemento*/
+
+.pizzaInformacao-tamanhos {
+    display: inline-flex;
+    /*Exibe um elemento como um flex container de nível embutido*/
+    border-radius: 10px;
+    overflow: hidden;
+    /*O estouro é cortado e o resto do conteúdo ficará invisível*/
+}
+
+.pizzaInformacao-tamanho {
+    padding: 10px 15px;
+    color: #000;
+    background-color: #EEE;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pizzaInformacao-tamanho:hover {
+    background-color: #CCC;
+}
+
+.pizzaInformacao-tamanho.selected {
+    background-color: #399ade;
+    color: #FFF;
+}
+
+.pizzaInformacao-tamanho.selected span {
+    color: #D6D6D6;
+}
+
+.pizzaInformacao-tamanho span {
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
+    /*espessura da fonte*/
+}
+
+.pizzaInformacao-preco {
+    display: flex;
+    align-items: center;
+}
+
+.pizzaInformacao-atualPreco {
+    font-size: 28px;
+    margin-right: 30px;
+}
+
+.pizzaInformacao-quantidadearea {
+    display: inline-flex;
+    background-color: #EEE;
+    border-radius: 10px;
+    height: 30px;
+}
+
+
+/* border: propriedades CSS permitem que você especifique o estilo, 
+a largura e a cor da borda de um elemento.
+*outline: Um contorno é uma linha desenhada em torno dos elementos, 
+fora das bordas, para fazer o elemento "se destacar".
+*/
+
+.pizzaInformacao-quantidadearea button {
+    border: 0;
+    background-color: transparent;
+    font-size: 17px;
+    outline: 0;
+    cursor: pointer;
+    padding: 0px 10px;
+    color: #333;
+}
+
+.pizzaInformacao-quantidade {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color: #000;
+}
+
+.pizzaInformacao-adicionarBotao {
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: #48d05f;
+    color: #FFF;
+    display: inline-block;
+    /*O elemento é renderizado como uma caixa de bloco dentro de uma caixa embutida*/
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.pizzaInformacao-adicionarBotao:hover {
+    background-color: #32a345;
+}
+
+.pizzaInformacao-cancelarBotao {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.pizzaInformacao-cancelarCelularBotao {
+    display: none;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.carrinho {
+    margin-bottom: 20px;
+}
+
+.carrinho-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.carrinho-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.carrinho-item-nome {
+    flex: 1;
+}
+
+.carrinho-item-quantidadearea {
+    display: inline-flex;
+    background-color: #EEE;
+    border-radius: 10px;
+    height: 30px;
+}
+
+.carrinho-item-quantidadearea button {
+    border: 0;
+    background-color: transparent;
+    font-size: 17px;
+    outline: 0;
+    cursor: pointer;
+    padding: 0px 10px;
+    color: #333;
+}
+
+.carrinho-item-quantidade {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color: #000;
+}
+
+.carrinho-totalitem {
+    padding: 15px 0;
+    border-top: 1px solid #79b9dd;
+    color: #315970;
+    display: flex;
+    /*Exibe um elemento como um flex container em nível de bloco*/
+    justify-content: space-between;
+    /*Os itens são posicionados com espaço entre as linhas*/
+    font-size: 15px;
+}
+
+
+/*first child: eletor é usado para selecionar o seletor especificado, apenas se for o primeiro filho de seu pai.*/
+
+.carrinho-totalitem span:first-child {
+    font-weight: bold;
+}
+
+.carrinho-totalitem.grande {
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+}
+
+.carrinho-finalizar {
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: #48d05f;
+    color: #FFF;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid #63f77c;
+    transition: all ease .2s;
+}
+
+.carrinho-finalizar:hover {
+    background-color: #35af4a;
+}
+
+@media (max-width:1000px) {
+    .pizza-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:840px) {
+    body {
+        flex-direction: column;
+    }
+    .pizza-area {
+        display: block;
+    }
+    .pizza-item {
+        max-width: 100%;
+    }
+    header {
+        display: flex;
+    }
+    main {
+        padding-top: 60px;
+    }
+    aside {
+        width: auto;
+        position: fixed;
+        left: 100vw;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transition: all ease .2s;
+    }
+    aside.show {
+        width: auto;
+    }
+    .carrinho-area {
+        width: 100vw;
+    }
+    .menu-fechar {
+        display: block;
+    }
+    .pizzaJanelaArea {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .pizzaJanelaCorpo {
+        width: 100vw;
+        display: block;
+        padding: 20px;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+    }
+    .pizzagrande img {
+        width: 75%;
+        height: auto;
+    }
+    .pizzaInformacao h1 {
+        margin-top: 20px;
+    }
+    .pizzaInformacao-quantidadearea {
+        height: 60px;
+    }
+    .pizzaInformacao-quantidadearea button {
+        font-size: 25px;
+        padding: 0px 25px;
+    }
+    .pizzaInformacao-quantidade {
+        line-height: 60px;
+        font-size: 20px;
+    }
+    .pizzaInformacao-adicionarBotao {
+        font-size: 20px;
+        display: block;
+        text-align: center;
+        margin: 30px auto;
+    }
+    .pizzaInformacao-cancelarBotao {
+        display: none;
+    }
+    .pizzaInformacao-cancelarCelularBotao {
+        display: block;
+    }
+}
