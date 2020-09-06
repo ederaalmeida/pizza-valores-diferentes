@@ -1,1 +1,1 @@
-Projeto site comprePizza
+Site comprePizza
